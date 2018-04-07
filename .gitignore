@@ -1,52 +1,78 @@
-# Prerequisites
-*.d
+#include <stdio.h>
+#include <stdlib.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#define ZERO 0
 
-# Linker output
-*.ilk
-*.map
-*.exp
+int main()
+{
+struct cadclient
+{
+    char nome[35];
+    char end[50];
+    char email[25];
+    int tel[8];
+};
 
-# Precompiled Headers
-*.gch
-*.pch
+struct Pedido
+{
+    char refr[10];
+    char tam[10];
+    char Tmassa[12];
+    char sabor[22];
+    char sabor1[22];
+    char sabor2[22];
+    char adds[22];
+};
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+struct cadclient c1;
+struct Pedido p1;
+int esc;
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+    while(esc != ZERO)
+    {
+    printf("\t------ Alo Pizza ------\n\n");
+    printf("#Escolha uma opcao:\n");
+    printf("-1__Cadastro\n");
+    printf("-2__Pedido\n");
+    printf("-0__Sair\n");
+    scanf("%d",&esc);
+    system("cls");
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+    switch(esc)
+        {
+    case 0:
+        printf ("\t\n\n------ SAIR ------\n\n");
+        break;
+    case 1:
+        fflush(stdin);
+        printf("\t------ Cadastro do cliente ------\n\n");
+        printf("Nome: ");
+        gets(c1.nome);
+        printf("Endereco: ");
+        gets(c1.end);
+        printf("Email: ");
+        gets(c1.email);
+        printf("Telefone: ");
+        gets(c1.tel);
+        system("cls");
+        break;
+    case 2:
+        fflush(stdin);
+        printf("\t------ Pedido ------\n\n");
+        printf("Tamanho: ");
+        gets(p1.tam);
+        printf("Tipo de massa: ");
+        gets(p1.Tmassa);
+        printf("Sabor 1: ");
+        gets(p1.sabor1);
+        printf("Sabor 2: ");
+        gets(p1.sabor2);
+        printf("Adicionais: ");
+        gets(p1.adds);
+        printf("Refrigerante: ");
+        gets(p1.refr);
+        break;
+        }//fim switch
+    }//fim while
+}//fim main
