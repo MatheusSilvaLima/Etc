@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define ZERO 0
+#define ZERO 0 // zerar todas as variaveis
 
 int main()
 {
-struct cadclient
+struct cadclient //struct para coletar dados do cliente
 {
     char nome[35];
     char end[50];
-    char email[25];
-    int tel[8];
+    char email[50];
+    int tel[11];
 };
 
-struct Pedido
+struct Pedido //struct para coletar informaçoes do pedido
 {
     char tam[10];
     char Tmassa[12];
@@ -27,7 +27,7 @@ struct Pedido
 struct cadclient c1;
 struct Pedido p1;
 
-    while(p1.esc != ZERO)
+    while(p1.esc != ZERO) //while p/ criar menu
     {
     printf("\t\n\n------ Alo Pizza ------\n\n");
     printf("#Escolha uma opcao:\n");
@@ -39,7 +39,7 @@ struct Pedido p1;
     scanf("%d",&p1.esc);
     system("cls");
 
-    switch(p1.esc)
+    switch(p1.esc) //switch dentro do while p/ selecionar as opçoes do menu
         {
     case 0:
         printf("\t\n\n--------- Obrigado ---------\n\n");
@@ -91,7 +91,6 @@ struct Pedido p1;
         printf("Refrigerante: %s\n\n",p1.ref);
         system("pause");
         system("cls");
-
         break;
     case 4:
         printf("\t\n\n------ Revisao do cadastro ------\n\n");
