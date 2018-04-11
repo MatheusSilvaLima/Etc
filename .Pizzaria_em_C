@@ -20,6 +20,7 @@ struct Pedido
     char sabor[40];
     char adds[22];
     char ref[10];
+    float quant[10];
     int esc;
 };
 
@@ -28,7 +29,7 @@ struct Pedido p1;
 
     while(p1.esc != ZERO)
     {
-    printf("\t------ Alo Pizza ------\n\n");
+    printf("\t\n\n------ Alo Pizza ------\n\n");
     printf("#Escolha uma opcao:\n");
     printf("-1__Cadastro\n");
     printf("-2__Pedido\n");
@@ -41,11 +42,11 @@ struct Pedido p1;
     switch(p1.esc)
         {
     case 0:
-        printf("\t\n\n--------- SAIR ---------\n\n");
+        printf("\t\n\n--------- Obrigado ---------\n\n");
         break;
     case 1:
         fflush(stdin);
-        printf("\t------ Cadastro do cliente ------\n\n");
+        printf("\t\n\n------ Cadastro do cliente ------\n\n");
         printf("Nome: ");
         gets(c1.nome);
         printf("Endereco: ");
@@ -54,21 +55,30 @@ struct Pedido p1;
         gets(c1.email);
         printf("Telefone: ");
         gets(c1.tel);
+        system("pause");
         system("cls");
         break;
     case 2:
         fflush(stdin);
-        printf("\t------ Pedido ------\n\n");
-        printf("Tamanho: ");
+        printf("\t\n\n------ Pedido ------\n\n");
+        printf("\nDisponiveis : Pequena, Media e Familia");
+        printf("\nTamanho: ");
         gets(p1.tam);
-        printf("Tipo de massa: ");
+        printf("\nMassas : Da casa, Italiana, Americana");
+        printf("\nTipo de massa: ");
         gets(p1.Tmassa);
-        printf("Sabor(es): ");
+        printf("\nSabores : Calabresa, Mussarela, Napolitana, 4 Queijos, Frango, Portuguesa ");
+        printf("\nSabor(es): ");
         gets(p1.sabor);
-        printf("Adicionais: ");
+        printf("\nAdicionais: ");
         gets(p1.adds);
-        printf("Refrigerante: ");
+        printf("\nTipos de refrigerante: Coca cola, Guarana, Pepsi, Jesus ");
+        printf("\nRefrigerante: ");
         gets(p1.ref);
+        printf("\nQuantidade : ");
+        gets(p1.quant);
+        printf("\n\nPedido salvo\n");
+        system("pause");
         system("cls");
         break;
     case 3:
@@ -92,6 +102,6 @@ struct Pedido p1;
         system("pause");
         system("cls");
         break;
-        }//fim switch
-    }//fim while
-}//fim main
+        }
+    }
+}
