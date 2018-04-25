@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void cadastro(void);
+void imprime (void);
+
+struct cadClient
+{
+    char nome[255],sexo[15],eCivil[25],nacion[25],naturalid[250],end[255],munic[255],bairro[255],email[255];
+    int rg[13],cpf[11],dNasc[15],EndNum[10],cep[15],tel[20],cel[20];
+};
+int main()
+
+{
+    struct cadClient c1;
+    printf("\tCadastrar Cliente\t\n");
+    printf("Nome Completo:");
+    gets(c1.nome);
+    printf("Sexo:");
+    gets(c1.sexo);
+    printf("Estado Civil:");
+    gets(c1.eCivil);
+    printf("Nacionalidade:");
+    gets(c1.nacion);
+    printf("Endereco:");
+    gets(c1.end);
+    printf("Municipio:");
+    gets(c1.munic);
+    printf("Bairro:");
+    gets(c1.bairro);
+    printf("Email:");
+    gets(c1.email);
+    printf("RG:");
+    scanf("%d",&c1.rg);
+    printf("CPF:");
+    scanf("%d",&c1.cpf);
+    printf("Data de Nascimento:");
+    scanf("%d",&c1.dNasc);
+    printf("Numero do Endereco:");
+    scanf("%d",&c1.EndNum);
+    printf("CEP:");
+    scanf("%d",&c1.cep);
+    printf("Telefone:");
+    scanf("%d",&c1.tel);
+    printf("Celular:");
+    scanf("%d",&c1.cel);
+
+
+    system("pause");
+    system("cls");
+}
