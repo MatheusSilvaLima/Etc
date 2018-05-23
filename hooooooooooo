@@ -46,18 +46,24 @@ int main()
         {
     case 0:
         sair();
+        break;
 
     case 1:
         cadastro();
+        break;
 
     case 2:
         pedido();
+        break;
 
     case 3:
         RevPedido();
+        break;
 
     case 4:
         RevCadastro();
+        break;
+
         }
     }
 }
