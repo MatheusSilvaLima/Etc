@@ -1,3 +1,5 @@
+//SISTEMA BÁSICO DE UMA PIZZARIA EM C
+//Autor: Matheus Silva Lima. 2018
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -25,7 +27,6 @@ struct Pedido //struct para coletar informaçoes do pedido
 struct Pedido p1;
 struct cadclient c1;
 
-
 int main()
 {
 
@@ -40,7 +41,6 @@ int main()
     printf("-4__Revisao do cadastro\n");
     printf("-0__Sair\n\n");
     scanf("%d",&esc);
-
 
     switch(esc) //switch dentro do while p/ selecionar as opçoes do menu
         {
@@ -67,11 +67,6 @@ int main()
         }
     }
 }
-
-
-
-
-
 
 void sair()
 {
@@ -163,7 +158,6 @@ printf("\n\t-----------------SABORES-----------------\t\n\t|\t\t\t\t\t|\n");
 
     }
 
-
 printf("\n\t-----------------BEBIDAS-----------------\t\n\t|\t\t\t\t\t|\n");
    printf("\t|\t\t1-Coca-Cola\t\t|\n");
    printf("\t|\t\t2-Guarana Antartica\t|\n");
@@ -252,6 +246,7 @@ switch (o){
         system("pause");
         system("cls");
 }
+
 void RevCadastro()
 {
     system("cls");
